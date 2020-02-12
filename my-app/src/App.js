@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import UserComp from './components/UserComp';
+import FollowerComp from './components/FollowerComp';
 
 class App extends React.Component {
   state = {
@@ -24,9 +26,9 @@ class App extends React.Component {
     return(
       <div className="App">
         <header>
-          <UserComp />
+          <UserComp user={this.state.user}/>
         </header>
-        <section>
+        <section className="followers">
           <FollowerComp />
         </section>
 
